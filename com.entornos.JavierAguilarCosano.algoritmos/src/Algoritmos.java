@@ -35,5 +35,25 @@ public class Algoritmos {
         return result;
     }
 	
-	
+	/**
+     * Calcula el factorial de un número entero positivo.
+     *
+     * @param numero El número entero para el cual calcular el factorial.
+     * @return El factorial del número.
+     * @throws IllegalArgumentException Si el número es negativo.
+     */
+	public static int factorial(int numero) {
+		if (numero < 0) {
+			throw new IllegalArgumentException("El número no puede ser negativo.");
+	    }
+	    if (numero == 0) {
+	    	return 1; // Factorial de 0 es 1
+	    }
+	    
+	    int resultado = 1;
+	    for (int i = 1; i <= numero; i++) {
+	    resultado *= i;
+	    }
+	    return resultado;
+	}
 }
