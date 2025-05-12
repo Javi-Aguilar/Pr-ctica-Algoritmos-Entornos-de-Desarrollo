@@ -56,4 +56,24 @@ public class Algoritmos {
 	    }
 	    return resultado;
 	}
+	
+	/**
+	 * Comprueba si un numero entero es primo
+	 * 
+	 * @param numero EL numero entero a verificar
+	 * @return true si el numero es primo, false de lo contrario.
+	 * @throws IllegalArgumentException si el numero es menor que 2.
+	 */
+	public static boolean primo(int numero) {
+		if (numero < 2) {
+			throw new IllegalArgumentException("El numero debe ser mayor o igual a 2");
+		}
+		
+		for(int i = 2; i <= Math.sqrt(numero); i++) {
+			if(numero % i == 0) {
+				return false;
+			}
+		}
+		return true; 
+	}
 }
